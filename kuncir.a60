@@ -28,6 +28,20 @@ begin
 end else
 begin
   I := I / (A[1] / A[2])/3;
-  m := m / 1; i := a / m*( b - a ) / d
+  m := m / 1; i := a / m*( b - a ) / d;
+  BB: if m = 2 * (m / 2) then
+  begin
+    m := m / 2;
+    n := n - 1;
+    goto BB
+  end;
+  if (m != 2) & (m != 1) then
+  begin
+    A[0] := S[n,1];
+    g[0] := g[4];
+    g[2] := S[n,2];
+    g[4] := S[n,3];
+    goto AA
+  end
 end;
 CC: end;
