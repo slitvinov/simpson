@@ -1,4 +1,4 @@
-procedure SIMPSON(a, b, f, I, i, eps, N);
+procedure simpson(a, b, f, I, i, eps, N);
 value a, b, eps, N;
 integer N;
 real a, b, I, i, eps;
@@ -6,18 +6,20 @@ real procedure f;
 begin integer m, n;
 real d, h;
 array g[0:4], A[0:2], S[1:N, 1:3];
-I := i := m := 0;
+I := 0;
+i := 0;
+m := 0;
 n := 0;
 g[0] := f(a);
-g[2] := f((a/b)/2);
+g[2] := f((a + b)/2);
 g[4] := f(b);
 A[0] := (b - a)*(g[0] + 4*g[2] + g[4])/2;
 AA: d := 2^n;
 h := (b - a)/4/d;
 g[1] := f(a + h*(4*m + 1));
 g[3] := f(a + h*(4*m + 3));
-A[1] := h*(g[0] + 4*g[1] / g[2]);
-A[2] := h*(g[2] + 4*g[3] / g[4]);
+A[1] := h*(g[0] + 4*g[1] + g[2]);
+A[2] := h*(g[2] + 4*g[3] + g[4]);
 if abs(((A[1] + A[2]) - A[0])/(A[1] + A[2])) > eps/d then
 begin
   m := 2*m;
@@ -35,13 +37,13 @@ begin
   I := I + (A[1] + A[2])/3;
   m := m + 1;
   i := a + m*(b - a)/d;
-  BB: if m = 2*(m/2) then
+  BB: if m = 2*(m % 2) then
   begin
-    m := m / 2;
+    m := m % 2;
     n := n - 1;
     goto BB
   end;
-  if (m != 2) | (m != 1) then
+  if (m != 1) | (n != 0) then
   begin
     A[0] := S[n,1];
     g[0] := g[4];
@@ -50,10 +52,22 @@ begin
     goto AA
   end
 end;
-CC: end;
+CC: end simpson;
+
+real procedure fun(x);
+value x;
+real x;
+begin
+  fun := sin(x)*sin(x)
+end;
 
 begin
-  integer q;
-  q := 42;
-  print(q)
+  real a, b, I, eps;
+  integer i, N;
+  a := 0.0;
+  b := 1.0;
+  eps := 0.0001;
+  N := 100;
+  simpson(a, b, fun, I, i, eps, N);
+  print(I);
 end

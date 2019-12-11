@@ -1,6 +1,6 @@
 .POSIX:
 .SUFFIXES: .c .o .a60
-.PHONY: lint clean
+.PHONY: all lint clean
 
 MARST_LDFLAGS = -static -lalgol -lm
 CFLAGS = -Og -g
