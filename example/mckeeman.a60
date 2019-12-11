@@ -6,7 +6,7 @@ real procedure fun(x);
 value x;
 real x;
 begin
-comment  print(x);
+  print(x);
   fun := sin(x*x)
 end;
 

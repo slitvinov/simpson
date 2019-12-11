@@ -10,8 +10,9 @@ Needs GNU MARST.
 # Example
 
 
-   ! ./algol | awk '/x = / {print $3}' > q
-   plot [0:3] sin(x*x), "q" u 1:(0.1*0) w points ps 1 pt 7
+   ! ./mckeeman | awk 'sub(/x = /, "")' > /tmp/q
+   ! ./kuncir | awk 'sub(/x = /, "")' > /tmp/q
+   plot [0:3] sin(x*x), "/tmp/q" u 1:(0) w points ps 1 pt 7
 
 # References
 
