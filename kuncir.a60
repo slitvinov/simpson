@@ -51,3 +51,9 @@ begin
   end
 end;
 CC: end;
+
+begin
+  integer q;
+  q := 42;
+  print(q)
+end
