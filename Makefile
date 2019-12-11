@@ -7,7 +7,9 @@ CFLAGS = -Og -g
 LINK = $(CC)
 MARST = marst
 L = libkuncir.a
-O = kuncir.o
+O = \
+kuncir.o\
+mckeeman.o\
 
 $L: $O; ar rv $@ $O && ranlib $@
 .c.o:; $(CC) $(CFLAGS) $< -c

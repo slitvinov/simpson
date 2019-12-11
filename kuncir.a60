@@ -1,4 +1,4 @@
-procedure simpson(a, b, f, I, i, eps, N);
+procedure kuncir(a, b, f, I, i, eps, N);
 value a, b, eps, N;
 integer N;
 real a, b, I, i, eps;

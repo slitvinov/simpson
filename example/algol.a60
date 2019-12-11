@@ -1,4 +1,4 @@
-procedure simpson(a, b, f, I, i, eps, N);
+procedure kuncir(a, b, f, I, i, eps, N);
 value a, b, eps, N;
 integer N;
 real a, b, I, i, eps;
@@ -20,7 +20,7 @@ begin
   b := 3.0;
   eps := 0.001;
   N := 100;
-  simpson(a, b, fun, I, i, eps, N);
+  kuncir(a, b, fun, I, i, eps, N);
   outreal(1, I);
   outstring(1, "\n")
 end
