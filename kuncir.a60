@@ -52,22 +52,4 @@ begin
     goto AA
   end
 end;
-CC: end simpson;
-
-real procedure fun(x);
-value x;
-real x;
-begin
-  fun := sin(x)*sin(x)
-end;
-
-begin
-  real a, b, I, eps;
-  integer i, N;
-  a := 0.0;
-  b := 1.0;
-  eps := 0.0001;
-  N := 100;
-  simpson(a, b, fun, I, i, eps, N);
-  print(I);
-end
+CC: end;

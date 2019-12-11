@@ -1,0 +1,24 @@
+procedure simpson(a, b, f, I, i, eps, N);
+value a, b, eps, N;
+integer N;
+real a, b, I, i, eps;
+real procedure f;
+code;
+
+real procedure fun(x);
+value x;
+real x;
+begin
+  fun := sin(x)*sin(x)
+end;
+
+begin
+  real a, b, I, eps;
+  integer i, N;
+  a := 0.0;
+  b := 1.0;
+  eps := 0.0001;
+  N := 100;
+  simpson(a, b, fun, I, i, eps, N);
+  print(I);
+end
