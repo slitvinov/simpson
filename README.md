@@ -18,3 +18,6 @@ Needs GNU MARST.
 - https://www.gnu.org/software/marst
 - G.F. Kuncir (1962), "Algorithm 103: Simpson's rule integrator",
   Communications of the ACM, 5 (6): 347, doi:10.1145/367766.368179
+- McKeeman, W. M. (1962). Algorithm 145: Adaptive numerical
+  integration by Simpson's rule. Communications of the ACM, 5(12),
+  604.
