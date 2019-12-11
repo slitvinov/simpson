@@ -1,0 +1,21 @@
+real procedure mckeeman(F) limit: (a, b) tolerance: (eps);
+real procedure F; real a, b, eps;
+code;
+
+real procedure fun(x);
+value x;
+real x;
+begin
+comment  print(x);
+  fun := sin(x*x)
+end;
+
+begin
+  real a, b, I, eps;
+  a := 0.0;
+  b := 3.0;
+  eps := 0.001;
+  I := mckeeman(fun, a, b, eps);
+  outreal(1, I);
+  outstring(1, "\n")
+end

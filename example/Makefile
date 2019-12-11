@@ -7,7 +7,8 @@ CFLAGS = -Og -g
 LINK = $(CC)
 MARST = marst
 M = \
-algol\
+kuncir\
+mckeeman\
 
 all: $M
 .o:; $(LINK) $< $(MARST_LDFLAGS) $(LDFLAGS) -o $@

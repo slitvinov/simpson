@@ -3,26 +3,27 @@ real procedure F; real a, b, eps;
 begin
 integer level;
 real procedure Simpson(F, a, da, Fa, Fm, Fb, absarea, est, eps);
+value a, da, Fa, Fm, Fb, absarea, est, eps;
 real procedure F;
 real a, da, Fa, Fm, Fb, absarea, est, eps;
 begin
-real dx, xl, x2, estl, est2, est3, F1, F2, F3, F4, sum;
+real dx, x1, x2, est1, est2, est3, F1, F2, F3, F4, sum;
 dx := da/3.0;
-xl := a + dx;
-x2 := xl + dx;
+x1 := a + dx;
+x2 := x1 + dx;
 F1 := 4.0 * F(a+dx/2.0);
-F2 := F(xl);
+F2 := F(x1);
 F3 := F(x2);
-F4 := 4.0*(a+2.5*dx);
-estl := (Fa+F1+F2) * dx/6.0;
+F4 := 4.0*F(a+2.5*dx);
+est1 := (Fa+F1+F2) * dx/6.0;
 est2 := (F2+Fm+F3) * dx/6.0;
 est3 := (F3+F4+Fb) * dx/6.0;
-absarea := absarea - abs(est) + abs(estl) + abs(est2) + abs(est3);
-sum := estl + est2 + est3;
+absarea := absarea - abs(est) + abs(est1) + abs(est2) + abs(est3);
+sum := est1 + est2 + est3;
 level := level + 1;
 Simpson := if (abs(est-sum) <= eps * absarea & est != 1.0) | level >= 7 then sum
-else Simpson (F, a, dx, Fa, F1, F2, absarea, estl, eps/3.0)
-+ Simpson (F, xl, dx, F2, Fm, F3, absarea, est2, eps/3.0)
+else Simpson (F, a, dx, Fa, F1, F2, absarea, est1, eps/3.0)
++ Simpson (F, x1, dx, F2, Fm, F3, absarea, est2, eps/3.0)
 + Simpson (F, x2, dx, F3, F4, Fb, absarea, est3, eps/3.0);
 level := level - 1
 end;
