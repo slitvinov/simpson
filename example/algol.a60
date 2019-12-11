@@ -9,7 +9,7 @@ real procedure fun(x);
 value x;
 real x;
 begin
-  print(x);
+comment  print(x);
   fun := sin(x*x)
 end;
 
@@ -21,5 +21,6 @@ begin
   eps := 0.001;
   N := 100;
   simpson(a, b, fun, I, i, eps, N);
-  print(I);
+  outreal(1, I);
+  outstring(1, "\n")
 end
