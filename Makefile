@@ -1,6 +1,6 @@
 .POSIX:
 .SUFFIXES: .c .o .a60
-.PHONY: all lint clean
+.PHONY: lint clean
 
 CFLAGS = -Og -g
 MARST = marst

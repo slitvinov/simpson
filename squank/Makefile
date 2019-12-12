@@ -1,6 +1,6 @@
 .POSIX:
 .SUFFIXES: .f .o
-.PHONY: all lint clean
+.PHONY: lint clean
 
 FC = gfortran
 FFLAGS = -Og -g
