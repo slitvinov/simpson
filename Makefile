@@ -2,9 +2,7 @@
 .SUFFIXES: .c .o .a60
 .PHONY: all lint clean
 
-MARST_LDFLAGS = -static -lalgol -lm
 CFLAGS = -Og -g
-LINK = $(CC)
 MARST = marst
 L = libkuncir.a
 O = \

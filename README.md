@@ -21,3 +21,6 @@ Needs GNU MARST.
 - McKeeman, W. M. (1962). Algorithm 145: Adaptive numerical
   integration by Simpson's rule. Communications of the ACM, 5(12),
   604.
+- Lyness, J. N. (1970). Algorithm 379: Squank (Simpson Quadrature used
+  adaptivity—noise killed)[D1]. Communications of the ACM, 13(4),
+  260-262
