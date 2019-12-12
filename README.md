@@ -1,7 +1,6 @@
 # Introduction
 
 ![sin(x*x)](./img/kuncir.svg)
-<img src="./img/kuncir.svg">
 
 # Install
 
