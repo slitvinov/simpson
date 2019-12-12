@@ -6,6 +6,7 @@ CFLAGS = -Og -g
 MARST = marst
 L = libkuncir.a
 O = \
+hennion.o\
 kuncir.o\
 mckeeman.o\
 

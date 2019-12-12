@@ -1,0 +1,14 @@
+real procedure hennion(n, a, b, y);
+value n, a, b;
+real a;
+real b;
+integer n;
+array y;
+comment;
+begin
+real s;
+integer i;
+s := (y[0] - y[n])/2;
+for i := 1 step 2 until n - 1 do s := s + 2*y[i] + y[i + 1];
+hennion := 2*(b - a)*s/(3 * n)
+end;
