@@ -14,7 +14,7 @@ begin
   real a, b, I, eps;
   a := 0.0;
   b := 3.0;
-  eps := 0.001;
+  eps := 0.05;
   I := mckeeman(fun, a, b, eps);
   outreal(1, I);
   outstring(1, "\n")

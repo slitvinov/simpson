@@ -18,7 +18,7 @@ begin
   integer i, N;
   a := 0.0;
   b := 3.0;
-  eps := 0.001;
+  eps := 0.05;
   N := 100;
   kuncir(a, b, fun, I, i, eps, N);
   outreal(1, I);
