@@ -7,6 +7,7 @@ CFLAGS = -Og -g
 LINK = $(CC)
 MARST = marst
 M = \
+hennion\
 kuncir\
 mckeeman\
 

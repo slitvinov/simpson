@@ -1,0 +1,34 @@
+real procedure hennion(n, a, b, y);
+value n, a, b;
+real a;
+real b;
+integer n;
+array y;
+code;
+
+real procedure fun(x);
+value x;
+real x;
+begin
+  print(x);
+  fun := sin(x*x)
+end;
+
+begin
+  integer n;
+  integer i;
+  array y[0:100];
+  real a;
+  real b;
+  real x;
+  n := 100;
+  a := 0;
+  b := 3;
+  for i := 0 step 1 until n do
+  begin
+    x := a + (b - a)*i/n;
+    y[i] := fun(x)
+  end;
+  outreal(1, hennion(n, a, b, y));
+  outstring(1, "\n")
+end
