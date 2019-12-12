@@ -1,5 +1,7 @@
 # Introduction
 
+Adaptive Simpson's numerical integration method method.
+
 ![sin(x*x)](./img/kuncir.svg)
 
 # Install
