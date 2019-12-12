@@ -4,7 +4,7 @@
 
 # Install
 
-Needs GNU MARST.
+Needs GNU MARST and GNU Fortran.
 
     make
     (cd example; make)
@@ -18,6 +18,7 @@ Needs GNU MARST.
 # References
 
 - https://www.gnu.org/software/marst
+- https://gcc.gnu.org/fortran
 - Kuncir, Guy F. "Algorithm 103: Simpson's rule integrator."
   Communications of the ACM 5.6 (1962): 347.
 - Kuncir, G. F. (1962). Algorithm 103: Simpson's rule
