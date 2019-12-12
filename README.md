@@ -1,6 +1,6 @@
 # Introduction
 
-Adaptive Simpson's numerical integration method method.
+Adaptive Simpson's numerical integration method.
 
 ![sin(x*x)](./img/kuncir.svg)
 
