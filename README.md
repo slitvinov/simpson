@@ -2,7 +2,7 @@
 
 Adaptive Simpson's numerical integration method.
 
-![sin(x*x)](./img/kuncir.svg)
+![sin(x*x)](./img/all.svg)
 
 # Install
 

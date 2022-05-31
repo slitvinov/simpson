@@ -21,7 +21,7 @@ begin
   real a;
   real b;
   real x;
-  n := 100;
+  n := 25;
   a := 0;
   b := 3;
   for i := 0 step 1 until n do
