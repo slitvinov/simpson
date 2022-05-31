@@ -9,6 +9,6 @@ driver\
 squank\
 
 all: $M
-o.f:; $(FC) $< $(M_LDFLAGS) $(LDFLAGS) -o $@
+.f:; $(FC) $< $(M_LDFLAGS) $(LDFLAGS) -o $@
 
 clean:; rm -f $M $(M:=.o) $(M:=.c)

@@ -11,7 +11,7 @@
       integer no
       a = 0.0
       big = 3.0
-      error = 0.001
+      error = 0.0075
       result = squank ( a, big, error, fifth, rum, no, fun)
       write (*, '(e30.16)') result
       end
