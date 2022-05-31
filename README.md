@@ -21,6 +21,8 @@ Needs GNU MARST and GNU Fortran.
 
 - https://www.gnu.org/software/marst
 - https://gcc.gnu.org/fortran
+- Hennion, P. E. (1962). Algorithm 84: Simpson's
+  integration. Communications of the ACM, 5(4), 208.
 - Kuncir, G. F. (1962). Algorithm 103: Simpson's rule
   integrator. Communications of the ACM, 5(6), 347.
 - McKeeman, W. M. (1962). Algorithm 145: Adaptive numerical
