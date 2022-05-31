@@ -8,13 +8,13 @@ Adaptive Simpson's numerical integration method.
 
 Needs GNU MARST and GNU Fortran.
 
-    make
-    (cd example; make)
+    $ make
+    $ (cd example; make)
 
 # Example
 
-    ! ./mckeeman | awk 'sub(/x = /, "")' > /tmp/q
-    ! ./kuncir | awk 'sub(/x = /, "")' > /tmp/q
+    $ ./mckeeman | awk 'sub(/x = /, "")' > /tmp/q
+    $ ./kuncir | awk 'sub(/x = /, "")' > /tmp/q
     plot sin(x*x), "/tmp/q" u 1:(0) w points ps 1 pt 7
 
 # References
