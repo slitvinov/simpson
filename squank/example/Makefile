@@ -1,21 +1,14 @@
 .POSIX:
-.SUFFIXES: .o .f
-.PHONY: all lint clean
+.SUFFIXES: .f
 
 FFLAGS = -Og -g
 FC = gfortran
-LINK = $(FC)
 M_LDFLAGS =-L.. -lsquank
 M = \
 driver\
 squank\
 
 all: $M
-.o:; $(LINK) $< $(M_LDFLAGS) $(LDFLAGS) -o $@
-.c.o:; $(CC) $(CFLAGS) $< -c
+o.f:; $(FC) $< $(M_LDFLAGS) $(LDFLAGS) -o $@
 
-.f:
-%: %.f
-
-lint:; make CFLAGS='-Wall -Wextra -g -O2'
 clean:; rm -f $M $(M:=.o) $(M:=.c)

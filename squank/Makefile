@@ -1,6 +1,5 @@
 .POSIX:
 .SUFFIXES: .f .o
-.PHONY: lint clean
 
 FC = gfortran
 FFLAGS = -Og -g
@@ -9,7 +8,6 @@ O = \
 main.o\
 
 $L: $O; ar rv $@ $O && ranlib $@
-.f.c:; $(FC) $< -o $@
+.f.o:; $(FC) $< -c
 
-lint:; make FFLAGS='-Wall -Wextra -g -O2'
 clean:; rm -f $L $O
