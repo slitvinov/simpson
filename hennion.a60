@@ -4,7 +4,9 @@ real a;
 real b;
 integer n;
 array y;
-comment;
+comment This is a method for obtaining the approximate value
+of the definite integral of a continuous function when integral
+cannot be evaluated in elementary functions ...;
 begin
 real s;
 integer i;
