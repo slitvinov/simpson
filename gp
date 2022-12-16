@@ -4,7 +4,7 @@
 set term svg lw 3
 set output "img/all.svg"
 set key off
-unset xtics
+set xtics (0, 3)
 unset ytics
 plot [-0.1:3.1] sin(x*x) lc 'black', \
 "/tmp/hennion" u 1:(0.60) w p lc 'black' pt 6, \
