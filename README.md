@@ -3,14 +3,16 @@
 Adaptive Simpson's numerical integration method.
 
 <p align="center"><img src="img/all.svg"/></p>
-From top to bottom: Hennion, Kuncir, McKeeman, and squank methods.
+From top to bottom: Hennion (nonadaptive), Kuncir, McKeeman, and squank methods.
 
 <h1>Install</h1>
 
 Needs GNU MARST and GNU Fortran.
 
     $ make
-    $ (cd example; make)
+    $ (cd example && make)
+    $ (cd squank &&  make)
+    $ (cd squank/example &&  make)
 
 <h1>Example</h1>
 
