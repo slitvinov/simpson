@@ -1,23 +1,25 @@
-# Introduction
+<h1>Introduction</h1>
 
 Adaptive Simpson's numerical integration method.
 
-![sin(x*x)](./img/all.svg)
+![sin(x*x)](img/all.svg)
+From top to bottom: Hennion, Kuncir, McKeeman, and squank methods.
 
-# Install
+<h1>Install</h1>
 
 Needs GNU MARST and GNU Fortran.
 
     $ make
     $ (cd example; make)
 
-# Example
+<h1>Example</h1>
 
     $ ./mckeeman | awk 'sub(/x = /, "")' > /tmp/q
     $ ./kuncir | awk 'sub(/x = /, "")' > /tmp/q
-    plot sin(x*x), "/tmp/q" u 1:(0) w points ps 1 pt 7
+    $ gnuplot
+    gnuplot> plot sin(x*x), "/tmp/q" u 1:(0) w points ps 1 pt 7
 
-# References
+<h1>References</h1>
 
 - https://www.gnu.org/software/marst
 - https://gcc.gnu.org/fortran
