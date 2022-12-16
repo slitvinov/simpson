@@ -2,7 +2,7 @@
 
 Adaptive Simpson's numerical integration method.
 
-![sin(x*x)](img/all.svg)
+<p align="center"><img src="img/all.svg"/></p>
 From top to bottom: Hennion, Kuncir, McKeeman, and squank methods.
 
 <h1>Install</h1>
